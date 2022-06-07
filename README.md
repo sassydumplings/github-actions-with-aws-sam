@@ -1,6 +1,16 @@
 # github-actions-with-aws-sam
+from demo purposes
 
 https://aws.amazon.com/blogs/compute/using-github-actions-to-deploy-serverless-applications/
+
+## To test deployment:
+curl https://<api-id>.execute-api.us-east-1.amazonaws.com/Prod/hello/
+Within the workflow run, expand the Run sam deploy section.
+Navigate to the AWS SAM Outputs section. The HelloWorldAPI value shows the API Gateway endpoint URL deployed in your AWS account.
+
+To reset:
+aws cloudformation delete-stack --stack-name sam-hello-world
+empty S3 bucket github-actions-patsyprice
 
 This project contains source code and supporting files for a serverless application that you can deploy with the SAM CLI. It includes the following files and folders.
 
